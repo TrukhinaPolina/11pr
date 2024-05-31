@@ -1,21 +1,32 @@
-
 class Restaurant:
 
-    def __init__(self, n, t, o):
+    def __init__(self, n, t, r):
         self.name = n
         self.type = t
-        self.open = o
+        self.rating = r
+
+    def describe_restaurant(self):
+        print(f"Название ресторана: {self.name}")
+        print(f"Тип кухни: {self.type}")
+        print(f"Рейтинг: {self.rating}")
+
+    def open_restaurant(self):
+        print("Ресторан открыт")
 
     def update_rating(self, new_rating):
         self.rating = new_rating
+        print(f"Рейтинг {self.name} обновился до {self.rating}")
 
 
-res1 = Restaurant("Рест", "Итальянская кухня", "работают с 10:00 до 23:00")
-print(res1.name, res1.type, res1.open)
+newRestaurant = Restaurant('Рест', 'Итальянская кухня', 4.5)
+
+newRestaurant.describe_restaurant()
+newRestaurant.open_restaurant()
 # task 2
-Rest1 = Restaurant('Метрополь', 'авторское меню', 'с 11:00 до 00:00')
-Rest2 = Restaurant('Коо', 'японскую кухня', 'с 14:00 до 02:00')
-Rest3 = Restaurant('Блок', 'мясной ресторан', 'с 9:00 до 01:00')
-print(Rest1.name, Rest1.type, Rest1.open)
-print(Rest2.name, Rest2.type, Rest2.open)
-print(Rest3.name, Rest3.type, Rest3.open)
+Rest1 = Restaurant('Метрополь', 'авторское меню',4.6)
+Rest2 = Restaurant('Коо', 'японскую кухня',3.7)
+Rest3 = Restaurant('Блок', 'мясной ресторан',4.2)
+Rest1.describe_restaurant()
+Rest2.describe_restaurant()
+Rest3.describe_restaurant()
+newRestaurant.update_rating(5.0)
