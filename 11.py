@@ -22,7 +22,7 @@ newRestaurant = Restaurant('Рест', 'Итальянская кухня', 4.5)
 
 newRestaurant.describe_restaurant()
 newRestaurant.open_restaurant()
-# task 2
+# task 2,3
 Rest1 = Restaurant('Метрополь', 'авторское меню',4.6)
 Rest2 = Restaurant('Коо', 'японскую кухня',3.7)
 Rest3 = Restaurant('Блок', 'мясной ресторан',4.2)
